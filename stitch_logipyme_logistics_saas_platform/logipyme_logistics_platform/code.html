@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>LogiPyme - Logística para MiPymes</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#e2e7ff", "on-error-container": "#93000a", "on-secondary-container": "#58657b", "on-tertiary-container": "#b3fff3", "error": "#ba1a1a", "tertiary-fixed": "#89f5e7", "background": "#faf8ff", "on-tertiary-fixed": "#00201d", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-primary-fixed-variant": "#003ea8", "error-container": "#ffdad6", "on-surface-variant": "#434655", "inverse-surface": "#283044", "outline": "#737686", "outline-variant": "#c3c6d7", "on-secondary-fixed": "#0e1c2f", "primary": "#004ac6", "primary-fixed-dim": "#b4c5ff", "surface-container": "#eaedff", "secondary-fixed": "#d6e3fe", "on-secondary": "#ffffff", "on-surface": "#131b2e", "on-primary-fixed": "#00174b", "surface": "#faf8ff", "on-background": "#131b2e", "tertiary": "#006058", "tertiary-fixed-dim": "#6bd8cb", "secondary-container": "#d6e3fe", "primary-fixed": "#dbe1ff", "primary-container": "#2563eb", "inverse-on-surface": "#eef0ff", "on-primary": "#ffffff", "surface-container-low": "#f2f3ff", "inverse-primary": "#b4c5ff", "surface-tint": "#0053db", "on-primary-container": "#eeefff", "secondary-fixed-dim": "#bac7e1", "surface-variant": "#dae2fd", "secondary": "#525f75", "surface-bright": "#faf8ff", "on-secondary-fixed-variant": "#3a475c", "surface-container-highest": "#dae2fd", "surface-dim": "#d2d9f4", "tertiary-container": "#007b71", "on-tertiary-fixed-variant": "#005049", "surface-container-lowest": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.75rem", "gutter-mobile": "1rem", "container-max": "80rem", "space-2xs": "0.25rem", "space-md": "1rem", "space-3xl": "4rem", "gutter-desktop": "1.5rem", "space-xs": "0.5rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-2xl": "3rem" }, "fontFamily": { "code-tracking": [ "JetBrains Mono" ], "label-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "code-tracking": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "body-sm": [ "13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="p-space-lg flex flex-col gap-space-sm bg-inverse-surface"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><img alt="Logotipo LogiPyme" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UfqqKtfpJtyV8UIute4-Ir768f87cEdHYLOteY53ZqXUfsuxgY2mkc5hhBLBDZ7GNuVwexcu5afWsEfiNHr_XH6aP3O8GqSHBpfyNYAanallT4-D2fL6IN8Ggpksji0dhsqS4xItOcHHgvLaCMy77K2S3QzG0yfv1DlZ9Ch812PKfu2NLhQsSmvZfer908VeW4nAGaQ__oUoebzuhxHbJGfNqzpILOFUMwYtzKp9oWn5_1BayKkS4mkz4"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface-container-lowest font-bold leading-tight">LogiPyme</span><span class="font-label-sm text-label-sm text-tertiary-fixed font-medium">Logística MiPyme</span></div></div><span class="bg-tertiary-container/80 text-on-tertiary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">CO</span></div><div class="mt-space-2xs bg-on-surface/20 rounded-lg p-space-xs flex items-center justify-between hover:bg-on-surface/30 cursor-pointer transition-colors"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary-fixed text-lg">store</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-surface-variant font-medium leading-none">Sucursal Activa</span><span class="font-label-md text-label-md text-surface-container-lowest font-semibold truncate max-w-[150px]">Bogotá D.C. - Principal</span></div></div><span class="material-symbols-outlined text-surface-variant text-sm">unfold_more</span></div><div class="bg-surface-variant/10 rounded-lg p-space-xs flex flex-col gap-space-2xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-xs text-primary-fixed">badge</span>Rol Activo</span><span class="font-label-sm text-label-sm text-secondary-fixed font-bold bg-primary/40 px-1.5 py-0.5 rounded">MiPyme</span></div><select class="bg-inverse-surface text-surface-container-lowest font-label-md text-label-md border-0 rounded px-space-xs py-1 focus:outline-none focus:ring-1 focus:ring-primary-fixed cursor-pointer"><option selected="" value="admin">Admin: Carolina Morales</option><option value="operador">Operador Logístico</option><option value="empleado">Empleado / Despachos</option><option value="superadmin">SuperAdmin LogiPyme</option></select></div></div><div class="px-space-md py-space-xs"><a class="w-full flex items-center justify-center gap-space-xs bg-primary-container text-on-primary font-label-lg text-label-lg py-2.5 px-space-md rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary transition-all" data-path="crear-pedido" href="#"><span class="material-symbols-outlined text-lg">add_circle</span>Nuevo Envío</a></div><nav class="flex flex-col gap-1 px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary-container text-on-primary font-bold rounded-lg" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="pedidos" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span>Pedidos</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="seguimiento" href="#"><span class="material-symbols-outlined text-xl">share_location</span>Seguimiento en Vivo</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="operadores" href="#"><span class="material-symbols-outlined text-xl">local_shipping</span>Operadores Logísticos</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="indicadores" href="#"><span class="material-symbols-outlined text-xl">analytics</span>Analítica &amp; KPIs</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="configuracion" href="#"><span class="material-symbols-outlined text-xl">tune</span>Configuración &amp; Privacidad</a></nav></div><div class="p-space-md mx-space-md mb-space-md bg-surface-variant/10 rounded-xl flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-tertiary-fixed flex items-center gap-1"><span class="material-symbols-outlined text-xs">verified_user</span>Habeas Data</span><span class="font-code-tracking text-code-tracking text-surface-variant">Ley 1581</span></div><p class="font-body-sm text-body-sm text-surface-variant leading-tight">Datos protegidos y cifrados para envíos en Colombia.</p></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-space-lg flex items-center justify-between gap-space-md"><div class="flex-1 max-w-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-lg pointer-events-none">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md pl-10 pr-space-md py-2 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Buscar guía, cliente, teléfono (+57) o ciudad..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg"><div class="flex flex-col text-right"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Saldo Fletes Prepago</span><span class="font-code-tracking text-code-tracking text-on-surface font-bold">$420.000 COP</span></div><button class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-space-xs py-1 rounded hover:bg-tertiary-container transition-colors">Recargar</button></div><button class="hidden xl:flex items-center gap-1.5 bg-primary-container text-on-primary font-label-md text-label-md px-space-sm py-2 rounded-lg hover:bg-primary transition-colors"><span class="material-symbols-outlined text-base">bolt</span>+ Pedido Rápido</button><a class="flex items-center gap-1.5 bg-[#25D366] text-surface-container-lowest font-label-md text-label-md px-space-sm py-2 rounded-lg shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity" href="#"><span class="material-symbols-outlined text-base">chat</span><span class="hidden sm:inline">WhatsApp 24/7</span></a><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg5QMu5rdUK5_Bxa3zKO8WlCfpYg5hA5o2gl6IpBt3mMvlTCIfy-n0gNbJEhngJ57nIOoklPQXZ_UcYxVGzEIhbyZjUQTtQhtBXVX7uEr5ARzglfDLodYwqYWE9iOSU9Sj0iR4nPOUxmXdP4-tbzhIWvGVng-m_ZGB3Qt_ekEDUhhBoxS3vBJV5EYNBDyAFh7XzRWaPpFUde_eizDr85T8ZBrsWyEusce3j73wsWK5KmUj-u4FuSxl"/><div class="hidden md:flex flex-col"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Carolina Morales</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[130px]">Dulces &amp; Moda Artesanal</span></div></div></div></div></header><main class="relative pt-16 w-full px-space-lg bg-surface flex-1"><div class="flex flex-col w-full gap-space-lg pb-space-2xl">
+<!-- Top Operational Banner & Greeting Header -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded-full uppercase tracking-wider font-bold">Operación en Vivo</span>
+<span class="font-code-tracking text-code-tracking text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+            Sincronizado hace 2m
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+          ¡Hola, Carolina! Aquí está el estado de tus entregas de hoy
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Supervisa tus despachos a nivel nacional, novedades en ruta y recaudo contra entrega en tiempo real.
+        </p>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex flex-wrap items-center gap-space-xs shrink-0">
+<div class="relative inline-flex items-center bg-surface-container-lowest rounded-lg shadow-sm px-space-sm py-2">
+<span class="material-symbols-outlined text-primary text-base mr-2">calendar_today</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer pr-space-xs">
+<option selected="" value="today">Hoy, 24 de Octubre</option>
+<option value="7d">Últimos 7 días</option>
+<option value="month">Este Mes (Octubre)</option>
+<option value="custom">Rango Personalizado...</option>
+</select>
+</div>
+<div class="inline-flex rounded-lg shadow-sm bg-surface-container-lowest p-1 gap-1">
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" title="Descargar informe consolidado">
+<span class="material-symbols-outlined text-sm text-tertiary">table_view</span>
+<span>Excel</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" title="Descargar manifiesto en PDF">
+<span class="material-symbols-outlined text-sm text-error">picture_as_pdf</span>
+<span>PDF</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Urgent Dispatch Notice Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high text-on-surface p-space-md shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-space-sm z-10">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-xl">departure_board</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-lg text-label-lg text-primary font-bold">Recogida Programada en Bogotá</span>
+<span class="font-label-sm text-label-sm bg-error text-on-error px-2 py-0.5 rounded-full font-bold uppercase">Cierra en 42 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Tienes <span class="font-bold text-on-surface">3 paquetes listos</span> esperando recogida por <span class="font-semibold text-primary">Coordinadora</span> antes de las 2:00 PM.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs z-10 shrink-0">
+<button class="bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md px-space-sm py-2 rounded-lg transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-base">print</span>
+          Imprimir 3 Rótulos
+        </button>
+<button class="bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md px-space-sm py-2 rounded-lg transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-base">task_alt</span>
+          Confirmar Entrega a Chofer
+        </button>
+</div>
+</div>
+</div>
+<!-- 5 Official Logistics KPI Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm">
+<!-- Total Pedidos -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">Total Envíos</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">local_shipping</span>
+</div>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold">148</div>
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm mt-0.5">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span class="font-bold">+12%</span> vs. semana anterior
+        </div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Pendientes de Recogida -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">Por Recoger</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-lg text-primary">label</span>
+</div>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold">14</div>
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          3 sin rotular todavía
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">En bodega principal</p>
+</div>
+<!-- En Ruta / Tránsito -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">En Tránsito</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-on-primary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">route</span>
+</div>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold">38</div>
+<span class="inline-flex items-center gap-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          4 transportadoras activas
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">21 entregas estimadas hoy</p>
+</div>
+<!-- Entregados con Éxito -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">Entregados</span>
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">verified</span>
+</div>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold">92</div>
+<span class="inline-flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          95.8% efectividad
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Con firma o foto digital</p>
+</div>
+<!-- Novedades / Alertas -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-error-container uppercase tracking-wider font-bold">Novedades</span>
+<div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">warning</span>
+</div>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-xl text-headline-xl text-error font-bold">4</div>
+<span class="inline-flex items-center gap-1 bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+          Dirección incompleta
+        </span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-error hover:underline font-bold" href="#">
+        Resolver novedades ahora →
+      </a>
+</div>
+</div>
+<!-- Middle Section: 60/40 Split (Weekly Flow Chart + Prepaid Wallet & COD Breakdown) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Weekly Delivery Performance (7 cols ~ 60%) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Comportamiento Semanal de Envíos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lunes a Domingo · Comparativo de cumplimiento logístico</p>
+</div>
+<div class="flex items-center gap-space-sm text-label-sm font-label-sm">
+<span class="flex items-center gap-1 text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span> Entregados</span>
+<span class="flex items-center gap-1 text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span> En Tránsito</span>
+<span class="flex items-center gap-1 text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-error"></span> Novedades</span>
+</div>
+</div>
+<!-- Custom Stylized Vector Bar Chart for Weekly Logistics -->
+<div class="relative w-full h-64 bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Capacidad operativa semanal: 180 paquetes</span>
+<span class="font-code-tracking text-code-tracking text-tertiary font-bold">94.2% Cumplimiento Promedio</span>
+</div>
+<!-- Visual Grouped Bar Columns (Mon to Sun) -->
+<div class="grid grid-cols-7 gap-2 items-end h-44 pt-4 px-2">
+<!-- Lun -->
+<div class="flex flex-col items-center gap-1.5 h-full justify-end group">
+<div class="w-full max-w-[28px] flex flex-col gap-1 items-center">
+<div class="w-full bg-tertiary rounded-t" style="height: 72px;" title="Entregados: 18"></div>
+<div class="w-full bg-primary rounded-t" style="height: 24px;" title="En ruta: 6"></div>
+<div class="w-full bg-error rounded-t" style="height: 4px;" title="Novedades: 1"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lun</span>
+</div>
+<!-- Mar -->
+<div class="flex flex-col items-center gap-1.5 h-full justify-end group">
+<div class="w-full max-w-[28px] flex flex-col gap-1 items-center">
+<div class="w-full bg-tertiary rounded-t" style="height: 88px;" title="Entregados: 22"></div>
+<div class="w-full bg-primary rounded-t" style="height: 16px;" title="En ruta: 4"></div>
+<div class="w-full bg-error rounded-t" style="height: 6px;" title="Novedades: 1"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mar</span>
+</div>
+<!-- Mie -->
+<div class="flex flex-col items-center gap-1.5 h-full justify-end group">
+<div class="w-full max-w-[28px] flex flex-col gap-1 items-center">
+<div class="w-full bg-tertiary rounded-t" style="height: 96px;" title="Entregados: 25"></div>
+<div class="w-full bg-primary rounded-t" style="height: 20px;" title="En ruta: 5"></div>
+<div class="w-full bg-error rounded-t" style="height: 2px;" title="Novedades: 0"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mié</span>
+</div>
+<!-- Jue (Today) -->
+<div class="flex flex-col items-center gap-1.5 h-full justify-end bg-surface-container-high/60 rounded-lg p-1 group">
+<span class="text-[9px] font-bold text-primary uppercase">Hoy</span>
+<div class="w-full max-w-[28px] flex flex-col gap-1 items-center">
+<div class="w-full bg-tertiary rounded-t shadow-sm" style="height: 84px;" title="Entregados: 21"></div>
+<div class="w-full bg-primary rounded-t shadow-sm" style="height: 48px;" title="En ruta: 12"></div>
+<div class="w-full bg-error rounded-t shadow-sm" style="height: 8px;" title="Novedades: 2"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Jue</span>
+</div>
+<!-- Vie -->
+<div class="flex flex-col items-center gap-1.5 h-full justify-end group">
+<div class="w-full max-w-[28px] flex flex-col gap-1 items-center">
+<div class="w-full bg-tertiary rounded-t opacity-40" style="height: 30px;"></div>
+<div class="w-full bg-primary rounded-t opacity-40" style="height: 52px;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vie</span>
+</div>
+<!-- Sab -->
+<div class="flex flex-col items-center gap-1.5 h-full justify-end group">
+<div class="w-full max-w-[28px] flex flex-col gap-1 items-center">
+<div class="w-full bg-tertiary rounded-t opacity-25" style="height: 15px;"></div>
+<div class="w-full bg-primary rounded-t opacity-25" style="height: 28px;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sáb</span>
+</div>
+<!-- Dom -->
+<div class="flex flex-col items-center gap-1.5 h-full justify-end group">
+<div class="w-full max-w-[28px] flex flex-col gap-1 items-center">
+<div class="w-full bg-surface-container rounded-t" style="height: 10px;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dom</span>
+</div>
+</div>
+</div>
+<!-- Quick KPI Strip under Chart -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tiempo Promedio Entrega</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">1.4 Días</span>
+<span class="font-body-sm text-body-sm text-tertiary">Ciudades principales</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Operador Más Rápido</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Inter Rapidísimo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">98% a tiempo</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Costo Promedio Flete</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$12.450 COP</span>
+<span class="font-body-sm text-body-sm text-primary">-8% convenio MiPyme</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Balance & Cash-on-Delivery COD Module (5 cols ~ 40%) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Prepaid Balance Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase font-bold">Billetera de Envíos</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Saldo Prepago Disponible</h3>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Activa</span>
+</div>
+<div class="flex items-baseline justify-between pt-space-2xs">
+<span class="font-code-tracking text-headline-xl text-on-surface font-bold tracking-tight">$420.000 <span class="text-label-lg font-normal text-on-surface-variant">COP</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">~ 33 envíos</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Tu saldo se descuenta automáticamente con cada guía generada sin esperar filas ni trámites manuales.
+        </p>
+<!-- Fast Recharge Options -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Recarga exprés sin comisiones:</span>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="flex items-center justify-center gap-1.5 py-2 px-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              PSE Bancos
+            </button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+              Nequi
+            </button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              Daviplata
+            </button>
+</div>
+<button class="w-full mt-space-2xs bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg py-2.5 rounded-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-all">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+            Recargar Saldo Inmediato
+          </button>
+</div>
+</div>
+<!-- Recaudo Contra-Entrega (COD) Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold">Contra Entrega</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Dinero por Liquidar</h3>
+</div>
+</div>
+<span class="font-code-tracking text-code-tracking text-tertiary font-bold">Ciclo: Viernes</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-body-md">
+<span class="text-on-surface-variant">Total recaudado en ruta:</span>
+<span class="font-code-tracking font-bold text-on-surface">$1.850.000 COP</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Fletes descontados de recaudo:</span>
+<span class="font-code-tracking text-error">-$148.500 COP</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Comisión recaudo seguro (1.5%):</span>
+<span class="font-code-tracking text-error">-$27.750 COP</span>
+</div>
+<div class="pt-space-xs flex items-center justify-between bg-surface-container-lowest p-space-xs rounded-lg mt-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Abono Neto a tu Cuenta:</span>
+<span class="font-code-tracking text-headline-sm text-headline-sm font-bold text-tertiary">$1.673.750 COP</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+            Bancolombia Ahorros **4812
+          </div>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold" href="#">Detalle de giros →</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Recent Shipments Live Table & Rapid WhatsApp Outreach -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Últimos Envíos en Movimiento</h2>
+<span class="bg-surface-container text-on-surface font-code-tracking text-code-tracking px-2 py-0.5 rounded-full font-bold">5 de 38 activos</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rastrea guías en tiempo real o notifica de inmediato al cliente por WhatsApp</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center gap-1" data-path="pedidos" href="#">
+          Ver todos los pedidos
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Responsive Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left min-w-[760px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg">Guía &amp; Destinatario</th>
+<th class="py-3 px-space-md">Ciudad Destino</th>
+<th class="py-3 px-space-md">Transportadora</th>
+<th class="py-3 px-space-md">Modalidad</th>
+<th class="py-3 px-space-md">Estado</th>
+<th class="py-3 px-space-md rounded-r-lg text-right">Acciones Rápidas</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<!-- Row 1: En Ruta Coordinadora -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Marcela Gómez Torres</span>
+<span class="font-code-tracking text-code-tracking text-on-surface-variant">GUI-CO-9842104</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-outline">location_on</span>
+<span class="font-semibold">Medellín, ANT</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block pl-5">El Poblado</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md font-semibold bg-surface-container px-2 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-[#0053db]"></span>
+                Coordinadora
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded font-semibold">
+                Contra-entrega ($85.000)
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md bg-secondary-fixed text-on-secondary-fixed font-semibold px-2.5 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                En Reparto Local
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<a class="p-2 rounded-lg bg-[#25D366]/15 text-[#075e54] hover:bg-[#25D366]/30 transition-colors" href="https://wa.me/573104558821?text=Hola%20Marcela,%20tu%20pedido%20con%20LogiPyme%20va%20en%20camino%20con%20Coordinadora" target="_blank" title="Enviar WhatsApp con guía">
+<span class="material-symbols-outlined text-lg">chat</span>
+</a>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" title="Ver detalle de trazabilidad">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Novedad Inter Rapidísimo -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-error-container/20">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Julián Andrés Pardo</span>
+<span class="font-code-tracking text-code-tracking text-on-surface-variant">GUI-IR-7719203</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-outline">location_on</span>
+<span class="font-semibold">Cali, VAC</span>
+</div>
+<span class="font-body-sm text-body-sm text-error font-medium block pl-5">Calle 5 # 34-12 (No existe)</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md font-semibold bg-surface-container px-2 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                Inter Rapidísimo
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded font-semibold">
+                Prepago
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md bg-error-container text-on-error-container font-bold px-2.5 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Dirección Incompleta
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<a class="p-2 rounded-lg bg-[#25D366] text-surface-container-lowest hover:opacity-90 transition-opacity" href="https://wa.me/573007621190?text=Hola%20Juli%C3%A1n,%20el%20mensajero%20de%20Inter%20Rapid%C3%ADsimo%20no%20encuentra%20tu%20direcci%C3%B3n.%20%C2%BFNos%20confirmas?" target="_blank" title="Aclarar dirección por WhatsApp">
+<span class="material-symbols-outlined text-lg">chat</span>
+</a>
+<button class="px-2.5 py-1.5 rounded-lg bg-error text-on-error font-label-sm text-label-sm font-bold hover:bg-on-error-container transition-colors" title="Corregir datos de despacho">
+                  Corregir
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Entregado Servientrega -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Valeria Restrepo Cruz</span>
+<span class="font-code-tracking text-code-tracking text-on-surface-variant">GUI-SE-1092834</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-outline">location_on</span>
+<span class="font-semibold">Barranquilla, ATL</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block pl-5">Norte - Altos del Prado</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md font-semibold bg-surface-container px-2 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                Servientrega
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded font-semibold">
+                Contra-entrega ($120.000)
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold px-2.5 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Entregado con Firma
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<a class="p-2 rounded-lg bg-[#25D366]/15 text-[#075e54] hover:bg-[#25D366]/30 transition-colors" href="https://wa.me/573158890214?text=%C2%A1Hola%20Valeria!%20Tu%20pedido%20ha%20sido%20entregado%20con%20%C3%A9xito.%20%C2%A1Esperamos%20que%20lo%20disfrutes!" target="_blank" title="Agradecer y pedir reseña">
+<span class="material-symbols-outlined text-lg">sentiment_satisfied</span>
+</a>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" title="Descargar comprobante digital">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: En Tránsito Envía -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Daniel Ospina Rivas</span>
+<span class="font-code-tracking text-code-tracking text-on-surface-variant">GUI-EN-5510294</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-outline">location_on</span>
+<span class="font-semibold">Bucaramanga, SAN</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block pl-5">Cabecera</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md font-semibold bg-surface-container px-2 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Envía Colvanes
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded font-semibold">
+                Prepago
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md bg-secondary-fixed text-on-secondary-fixed font-semibold px-2.5 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                En Ruta Troncal
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<a class="p-2 rounded-lg bg-[#25D366]/15 text-[#075e54] hover:bg-[#25D366]/30 transition-colors" href="https://wa.me/573214569080?text=Hola%20Daniel,%20tu%20env%C3%ADo%20con%20Env%C3%ADa%20va%20camino%20a%20Bucaramanga" target="_blank" title="Enviar WhatsApp">
+<span class="material-symbols-outlined text-lg">chat</span>
+</a>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" title="Rastrear en mapa">
+<span class="material-symbols-outlined text-lg">share_location</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Por Recoger Hoy Coordinadora -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Camila Herrera Soto</span>
+<span class="font-code-tracking text-code-tracking text-on-surface-variant">GUI-CO-9842109</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-outline">location_on</span>
+<span class="font-semibold">Bogotá, D.C.</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block pl-5">Usaquén - Cedritos</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md font-semibold bg-surface-container px-2 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-[#0053db]"></span>
+                Coordinadora
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded font-semibold">
+                Contra-entrega ($62.000)
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md bg-surface-container text-primary font-bold px-2.5 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Esperando Recogida
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-2 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors" title="Imprimir rótulo adhesivo">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" title="Ver detalle de paquete">
+<span class="material-symbols-outlined text-lg">inventory_2</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Meta -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-xs pt-space-xs text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-tertiary">lock</span>
+<span>Guías cifradas bajo estándar nacional de transporte Mintransporte Colombia.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span>Mostrando 5 de 148 registros</span>
+<button class="px-space-xs py-1 rounded bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors">Página 1 de 30</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

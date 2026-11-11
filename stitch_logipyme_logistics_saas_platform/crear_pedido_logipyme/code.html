@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>LogiPyme - Logística para MiPymes</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#e2e7ff", "on-error-container": "#93000a", "on-secondary-container": "#58657b", "on-tertiary-container": "#b3fff3", "error": "#ba1a1a", "tertiary-fixed": "#89f5e7", "background": "#faf8ff", "on-tertiary-fixed": "#00201d", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-primary-fixed-variant": "#003ea8", "error-container": "#ffdad6", "on-surface-variant": "#434655", "inverse-surface": "#283044", "outline": "#737686", "outline-variant": "#c3c6d7", "on-secondary-fixed": "#0e1c2f", "primary": "#004ac6", "primary-fixed-dim": "#b4c5ff", "surface-container": "#eaedff", "secondary-fixed": "#d6e3fe", "on-secondary": "#ffffff", "on-surface": "#131b2e", "on-primary-fixed": "#00174b", "surface": "#faf8ff", "on-background": "#131b2e", "tertiary": "#006058", "tertiary-fixed-dim": "#6bd8cb", "secondary-container": "#d6e3fe", "primary-fixed": "#dbe1ff", "primary-container": "#2563eb", "inverse-on-surface": "#eef0ff", "on-primary": "#ffffff", "surface-container-low": "#f2f3ff", "inverse-primary": "#b4c5ff", "surface-tint": "#0053db", "on-primary-container": "#eeefff", "secondary-fixed-dim": "#bac7e1", "surface-variant": "#dae2fd", "secondary": "#525f75", "surface-bright": "#faf8ff", "on-secondary-fixed-variant": "#3a475c", "surface-container-highest": "#dae2fd", "surface-dim": "#d2d9f4", "tertiary-container": "#007b71", "on-tertiary-fixed-variant": "#005049", "surface-container-lowest": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.75rem", "gutter-mobile": "1rem", "container-max": "80rem", "space-2xs": "0.25rem", "space-md": "1rem", "space-3xl": "4rem", "gutter-desktop": "1.5rem", "space-xs": "0.5rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-2xl": "3rem" }, "fontFamily": { "code-tracking": [ "JetBrains Mono" ], "label-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "code-tracking": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "body-sm": [ "13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="p-space-lg flex flex-col gap-space-sm bg-inverse-surface"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><img alt="Logotipo LogiPyme" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UfqqKtfpJtyV8UIute4-Ir768f87cEdHYLOteY53ZqXUfsuxgY2mkc5hhBLBDZ7GNuVwexcu5afWsEfiNHr_XH6aP3O8GqSHBpfyNYAanallT4-D2fL6IN8Ggpksji0dhsqS4xItOcHHgvLaCMy77K2S3QzG0yfv1DlZ9Ch812PKfu2NLhQsSmvZfer908VeW4nAGaQ__oUoebzuhxHbJGfNqzpILOFUMwYtzKp9oWn5_1BayKkS4mkz4"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface-container-lowest font-bold leading-tight">LogiPyme</span><span class="font-label-sm text-label-sm text-tertiary-fixed font-medium">Logística MiPyme</span></div></div><span class="bg-tertiary-container/80 text-on-tertiary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">CO</span></div><div class="mt-space-2xs bg-on-surface/20 rounded-lg p-space-xs flex items-center justify-between hover:bg-on-surface/30 cursor-pointer transition-colors"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary-fixed text-lg">store</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-surface-variant font-medium leading-none">Sucursal Activa</span><span class="font-label-md text-label-md text-surface-container-lowest font-semibold truncate max-w-[150px]">Bogotá D.C. - Principal</span></div></div><span class="material-symbols-outlined text-surface-variant text-sm">unfold_more</span></div><div class="bg-surface-variant/10 rounded-lg p-space-xs flex flex-col gap-space-2xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-xs text-primary-fixed">badge</span>Rol Activo</span><span class="font-label-sm text-label-sm text-secondary-fixed font-bold bg-primary/40 px-1.5 py-0.5 rounded">MiPyme</span></div><select class="bg-inverse-surface text-surface-container-lowest font-label-md text-label-md border-0 rounded px-space-xs py-1 focus:outline-none focus:ring-1 focus:ring-primary-fixed cursor-pointer"><option selected="" value="admin">Admin: Carolina Morales</option><option value="operador">Operador Logístico</option><option value="empleado">Empleado / Despachos</option><option value="superadmin">SuperAdmin LogiPyme</option></select></div></div><div class="px-space-md py-space-xs"><a class="w-full flex items-center justify-center gap-space-xs bg-primary-container text-on-primary font-label-lg text-label-lg py-2.5 px-space-md rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary transition-all" data-path="crear-pedido" href="#"><span class="material-symbols-outlined text-lg">add_circle</span>Nuevo Envío</a></div><nav class="flex flex-col gap-1 px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="pedidos" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span>Pedidos</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="seguimiento" href="#"><span class="material-symbols-outlined text-xl">share_location</span>Seguimiento en Vivo</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="operadores" href="#"><span class="material-symbols-outlined text-xl">local_shipping</span>Operadores Logísticos</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="indicadores" href="#"><span class="material-symbols-outlined text-xl">analytics</span>Analítica &amp; KPIs</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-variant hover:bg-surface-variant/10 hover:text-surface-container-lowest transition-colors font-label-lg text-label-lg" data-path="configuracion" href="#"><span class="material-symbols-outlined text-xl">tune</span>Configuración &amp; Privacidad</a></nav></div><div class="p-space-md mx-space-md mb-space-md bg-surface-variant/10 rounded-xl flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-tertiary-fixed flex items-center gap-1"><span class="material-symbols-outlined text-xs">verified_user</span>Habeas Data</span><span class="font-code-tracking text-code-tracking text-surface-variant">Ley 1581</span></div><p class="font-body-sm text-body-sm text-surface-variant leading-tight">Datos protegidos y cifrados para envíos en Colombia.</p></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-space-lg flex items-center justify-between gap-space-md"><div class="flex-1 max-w-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-lg pointer-events-none">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md pl-10 pr-space-md py-2 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Buscar guía, cliente, teléfono (+57) o ciudad..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg"><div class="flex flex-col text-right"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Saldo Fletes Prepago</span><span class="font-code-tracking text-code-tracking text-on-surface font-bold">$420.000 COP</span></div><button class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-space-xs py-1 rounded hover:bg-tertiary-container transition-colors">Recargar</button></div><button class="hidden xl:flex items-center gap-1.5 bg-primary-container text-on-primary font-label-md text-label-md px-space-sm py-2 rounded-lg hover:bg-primary transition-colors"><span class="material-symbols-outlined text-base">bolt</span>+ Pedido Rápido</button><a class="flex items-center gap-1.5 bg-[#25D366] text-surface-container-lowest font-label-md text-label-md px-space-sm py-2 rounded-lg shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity" href="#"><span class="material-symbols-outlined text-base">chat</span><span class="hidden sm:inline">WhatsApp 24/7</span></a><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg5QMu5rdUK5_Bxa3zKO8WlCfpYg5hA5o2gl6IpBt3mMvlTCIfy-n0gNbJEhngJ57nIOoklPQXZ_UcYxVGzEIhbyZjUQTtQhtBXVX7uEr5ARzglfDLodYwqYWE9iOSU9Sj0iR4nPOUxmXdP4-tbzhIWvGVng-m_ZGB3Qt_ekEDUhhBoxS3vBJV5EYNBDyAFh7XzRWaPpFUde_eizDr85T8ZBrsWyEusce3j73wsWK5KmUj-u4FuSxl"/><div class="hidden md:flex flex-col"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Carolina Morales</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[130px]">Dulces &amp; Moda Artesanal</span></div></div></div></div></header><main class="relative pt-16 w-full px-space-lg bg-surface flex-1"><div class="flex flex-col w-full pb-space-3xl">
+<!-- Progress Header Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-primary font-label-sm">
+<span class="material-symbols-outlined text-base">local_shipping</span>
+<span>DESPACHO EXPRESS NACIONAL &amp; URBANO</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Crear Nuevo Pedido de Entrega</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Completa los 3 pasos en menos de 2 minutos para programar recolección sin costo hoy mismo.</p>
+</div>
+<!-- Visual Step Progress Tracker -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full self-start lg:self-center">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md">1</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Destinatario</span>
+</div>
+<span class="text-outline-variant font-label-md">→</span>
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md">2</div>
+<span class="font-label-md text-label-md text-secondary">Paquete</span>
+</div>
+<span class="text-outline-variant font-label-md">→</span>
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md">3</div>
+<span class="font-label-md text-label-md text-secondary">Operador &amp; Guía</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main 2-Column Split Interface -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Step-by-Step Logistics Forms (65% width / 8 cols) -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Paso 1: Datos del Destinatario -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-fixed text-primary font-headline-sm">1</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Datos del Destinatario</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">¿A quién y a dónde le enviaremos el paquete?</p>
+</div>
+</div>
+<span class="hidden sm:flex items-center gap-1 font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-space-xs py-1 rounded-full">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span> Validación Rápida
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Nombre Cliente -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="cliente-nombre">
+              Nombre Completo del Cliente <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-lg pointer-events-none">person</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-lowest shadow-inner" id="cliente-nombre" placeholder="Nombre y Apellidos" type="text" value="Andrés Felipe Martínez"/>
+</div>
+</div>
+<!-- Teléfono / WhatsApp -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="cliente-tel">
+              WhatsApp / Móvil <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-code-tracking text-code-tracking text-on-surface-variant font-bold">+57</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-12 pr-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-lowest shadow-inner" id="cliente-tel" placeholder="300 000 0000" type="tel" value="310 987 6543"/>
+</div>
+</div>
+</div>
+<!-- Switch WhatsApp Automático -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">mark_chat_read</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Enviar confirmación y link de rastreo por WhatsApp</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">El cliente recibirá actualizaciones automáticas sobre su entrega.</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-secondary-fixed-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Correo Electrónico (Opcional) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="cliente-correo">Correo Electrónico</label>
+<span class="font-label-sm text-label-sm text-outline">Opcional</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-lg pointer-events-none">mail</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-lowest shadow-inner" id="cliente-correo" placeholder="andres.martinez@email.com" type="email"/>
+</div>
+</div>
+<!-- Departamento y Ciudad -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="cliente-ciudad">
+              Departamento / Ciudad Destino <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-primary text-lg pointer-events-none">location_on</span>
+<select class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-md py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-lowest cursor-pointer shadow-inner appearance-none" id="cliente-ciudad">
+<option selected="" value="cali">Valle del Cauca - Cali (Urbana Principal)</option>
+<option value="bogota">Bogotá D.C. - Bogotá</option>
+<option value="medellin">Antioquia - Medellín</option>
+<option value="barranquilla">Atlántico - Barranquilla</option>
+<option value="bucaramanga">Santander - Bucaramanga</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 text-outline pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Dirección Principal y Complemento -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<div class="md:col-span-8 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="cliente-dir">
+              Dirección de Entrega <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-lg pointer-events-none">pin_drop</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-lowest shadow-inner" id="cliente-dir" placeholder="Ej. Cra 43A # 18 Sur - 12" type="text" value="Calle 14 # 85-32"/>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="cliente-barrio">
+              Barrio / Conjunto / Apto
+            </label>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-lowest shadow-inner" id="cliente-barrio" placeholder="Ej. Apto 302 / Bloque 4" type="text" value="B/ Ingenio III, Torre 2 Apt 501"/>
+</div>
+</div>
+<!-- Instrucciones para el Mensajero -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="cliente-instrucciones">
+            Instrucciones para el Mensajero
+          </label>
+<div class="relative flex items-start">
+<textarea class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md p-space-sm rounded-lg focus:outline-none focus:bg-surface-container-lowest shadow-inner" id="cliente-instrucciones" placeholder="Ej. Tocar timbre 302, dejar en portería con vigilante si no responden." rows="2">Tocar el timbre 302, dejar en portería vigilada si no responden.</textarea>
+</div>
+</div>
+</section>
+<!-- Paso 2: Detalles del Paquete y Mercancía -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-fixed text-primary font-headline-sm">2</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Detalles del Paquete &amp; Mercancía</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Especifica peso, tamaño y valor para el cálculo del flete y cobertura.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-2xl">package_2</span>
+</div>
+<!-- Descripción y Categoría -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md pt-space-xs">
+<div class="md:col-span-7 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="paquete-desc">
+              Descripción del Contenido <span class="text-error">*</span>
+</label>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-lowest shadow-inner" id="paquete-desc" placeholder="Ej. Joyería de plata, Ropa, Cosméticos..." type="text" value="Vestido artesanal de lino y 2 accesorios"/>
+</div>
+<div class="md:col-span-5 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="paquete-cat">
+              Categoría de Producto
+            </label>
+<select class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-lowest cursor-pointer shadow-inner" id="paquete-cat">
+<option selected="" value="moda">Moda &amp; Confección</option>
+<option value="calzado">Calzado &amp; Marroquinería</option>
+<option value="belleza">Belleza &amp; Cosméticos</option>
+<option value="alimentos">Alimentos No Perecederos</option>
+<option value="tecnologia">Tecnología &amp; Accesorios</option>
+<option value="otro">Otros Artículos</option>
+</select>
+</div>
+</div>
+<!-- Peso con Botones Rápidos -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface">Peso Aproximado del Paquete</label>
+<span class="font-code-tracking text-code-tracking text-primary font-bold">1.2 Kg Seleccionado</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-all" type="button">
+<span class="font-label-md text-label-md font-bold">Liviano</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">&lt; 1 Kg</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-primary-container text-on-primary shadow-sm" type="button">
+<span class="font-label-md text-label-md font-bold">Estándar</span>
+<span class="font-label-sm text-label-sm text-on-primary-container">1 - 2 Kg</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-all" type="button">
+<span class="font-label-md text-label-md font-bold">Mediano</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 - 5 Kg</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-all" type="button">
+<span class="font-label-md text-label-md font-bold">Pesado</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">&gt; 5 Kg</span>
+</button>
+</div>
+</div>
+<!-- Dimensiones y Valor Declarado -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-end">
+<div class="md:col-span-6 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Dimensiones (Largo x Ancho x Alto cm)</label>
+<div class="grid grid-cols-3 gap-2">
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low text-center font-code-tracking text-code-tracking py-2 rounded-lg" title="Largo" type="number" value="25"/>
+<span class="absolute right-2 text-outline font-label-sm">L</span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low text-center font-code-tracking text-code-tracking py-2 rounded-lg" title="Ancho" type="number" value="20"/>
+<span class="absolute right-2 text-outline font-label-sm">An</span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low text-center font-code-tracking text-code-tracking py-2 rounded-lg" title="Alto" type="number" value="10"/>
+<span class="absolute right-2 text-outline font-label-sm">Al</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="val-declarado">Valor Declarado Asegurado</label>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Seguro 1%</span>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-code-tracking text-code-tracking text-on-surface-variant font-bold">$</span>
+<input class="w-full bg-surface-container-low text-on-surface font-code-tracking text-code-tracking font-bold pl-8 pr-space-md py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-lowest shadow-inner" id="val-declarado" type="text" value="120.000"/>
+<span class="absolute right-3 font-label-sm text-label-sm text-outline">COP</span>
+</div>
+</div>
+</div>
+<!-- Modalidad de Cobro: Contra Entrega vs Flete Pagado -->
+<div class="flex flex-col gap-space-xs mt-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-bold">Modalidad de Cobro del Pedido</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Opción: Ya Pagado -->
+<label class="relative flex flex-col p-space-sm rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container">
+<div class="flex items-start gap-space-xs">
+<input class="mt-1 text-primary focus:ring-0" name="modalidad_pago" type="radio" value="pagado"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Envío Ya Pagado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">El cliente ya te pagó el producto. Solo se descuenta el flete de tu saldo.</span>
+</div>
+</div>
+</label>
+<!-- Opción: Contra Entrega (Active) -->
+<label class="relative flex flex-col p-space-sm rounded-xl bg-surface-container-high cursor-pointer shadow-sm">
+<div class="flex items-start gap-space-xs">
+<input checked="" class="mt-1 text-primary focus:ring-0" name="modalidad_pago" type="radio" value="contraentrega"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold">Cobro Contra Entrega (COD)</span>
+<span class="bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-1.5 py-0.2 rounded">Popular</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">El transportador cobra en efectivo o Nequi al entregar.</span>
+<div class="mt-2 pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Monto a recaudar:</span>
+<span class="font-code-tracking text-code-tracking text-tertiary font-bold">$135.000 COP</span>
+</div>
+</div>
+</div>
+</label>
+</div>
+</div>
+</section>
+<!-- Recogida Info Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl">home_pin</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Dirección de Recolección (Tu Bodega)</span>
+<span class="font-label-sm text-label-sm bg-tertiary text-on-tertiary px-1.5 py-0.5 rounded">Gratis</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Cra 7 # 71-21 Torre B Of. 402, Bogotá D.C. (Dulces &amp; Moda Artesanal)</p>
+</div>
+<button class="text-primary hover:text-on-primary-fixed-variant font-label-sm text-label-sm font-bold shrink-0" type="button">
+          Cambiar
+        </button>
+</div>
+</div>
+<!-- Right Column: Live Rates & Operators Summary (Sticky 35% width / 4-5 cols) -->
+<div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-space-md sticky top-20">
+<!-- Paso 3: Comparativa de Tarifas con Operadores -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="flex items-center justify-center w-7 h-7 rounded-lg bg-primary-fixed text-primary font-headline-sm">3</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Selecciona tu Operador</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Ruta Bogotá → Cali</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-2 py-0.5 rounded-full font-bold">
+            Tarifas MiPyme
+          </span>
+</div>
+<!-- Carrier Matrix (Selectable Cards) -->
+<div class="flex flex-col gap-2.5">
+<!-- Coordinadora (Recomendado) -->
+<label class="relative flex items-center justify-between p-space-sm rounded-xl bg-primary-fixed/20 cursor-pointer shadow-sm transition-all hover:bg-primary-fixed/30">
+<div class="flex items-center gap-space-xs">
+<input checked="" class="text-primary focus:ring-0" name="carrier_select" type="radio" value="coordinadora"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold">Coordinadora</span>
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-1.5 py-0.2 rounded font-semibold">Mejor Calificación</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">bolt</span> Entrega: Mañana 25 Oct
+                </span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-code-tracking text-code-tracking text-primary font-bold text-base">$11.200</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">COP</span>
+</div>
+</label>
+<!-- Inter Rapidísimo (Más económica) -->
+<label class="relative flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<input class="text-primary focus:ring-0" name="carrier_select" type="radio" value="interrapidisimo"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold">Inter Rapidísimo</span>
+<span class="font-label-sm text-label-sm bg-tertiary-container text-on-tertiary-container px-1.5 py-0.2 rounded font-semibold">Más Económico</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">schedule</span> Entrega: 25 - 26 Oct
+                </span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-code-tracking text-code-tracking text-on-surface font-bold text-base">$10.500</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">COP</span>
+</div>
+</label>
+<!-- Servientrega -->
+<label class="relative flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<input class="text-primary focus:ring-0" name="carrier_select" type="radio" value="servientrega"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Servientrega</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">bolt</span> Entrega: Mañana 25 Oct
+                </span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-code-tracking text-code-tracking text-on-surface font-bold text-base">$12.800</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">COP</span>
+</div>
+</label>
+<!-- Mensajeros Urbanos (Mismo día) -->
+<label class="relative flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<input class="text-primary focus:ring-0" name="carrier_select" type="radio" value="urbanos"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Mensajeros Urbanos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">two_wheeler</span> Express Hoy Mismo
+                </span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-code-tracking text-code-tracking text-on-surface font-bold text-base">$9.800</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">COP</span>
+</div>
+</label>
+</div>
+<!-- Desglose Financiero Final -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm">
+<span>Flete Base (Coordinadora):</span>
+<span class="font-code-tracking text-code-tracking text-on-surface">$11.200 COP</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm">
+<span>Seguro de Mercancía (1%):</span>
+<span class="font-code-tracking text-code-tracking text-on-surface">$1.200 COP</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm">
+<span>Comisión de Recaudo COD:</span>
+<span class="font-code-tracking text-code-tracking text-tertiary font-semibold">$0 COP (Promo)</span>
+</div>
+<div class="my-1 h-[1px] bg-surface-container-high w-full"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Total a Debitar:</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">De tu saldo disponible</span>
+</div>
+<div class="text-right">
+<span class="font-headline-lg text-headline-lg text-primary font-bold leading-tight">$12.400</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">COP</span>
+</div>
+</div>
+<!-- Balance Indicator Pill -->
+<div class="mt-2 flex items-center justify-between bg-surface-container-lowest px-space-xs py-1.5 rounded-lg text-on-surface-variant font-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary">account_balance_wallet</span> Saldo actual: $420.000
+            </span>
+<span class="font-code-tracking text-primary font-bold">Quedarán: $407.600</span>
+</div>
+</div>
+<!-- Action CTA Buttons -->
+<div class="flex flex-col gap-space-xs">
+<button class="w-full py-3.5 px-space-md bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-xl shadow-md transition-all flex items-center justify-center gap-2 group" type="button">
+<span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">local_shipping</span>
+<span>Generar Guía y Solicitar Recogida</span>
+</button>
+<button class="w-full py-2.5 px-space-md bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-xl transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">save</span>
+<span>Guardar como Borrador</span>
+</button>
+</div>
+<!-- Trust & Security Badges -->
+<div class="flex items-center justify-center gap-space-md pt-space-xs text-on-surface-variant font-body-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary">verified</span>
+<span class="text-[12px]">Recogida Gratis</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary">security</span>
+<span class="text-[12px]">Seguro 100% Cubierto</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary">chat</span>
+<span class="text-[12px]">Soporte MiPyme</span>
+</div>
+</div>
+</div>
+<!-- Live Mini Map Route Visualizer -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-primary">route</span> Ruta Terrestre
+          </span>
+<span class="font-code-tracking text-code-tracking text-on-surface-variant">462 km • ~9 hrs</span>
+</div>
+<div class="w-full h-32 bg-cover bg-center rounded-lg relative overflow-hidden flex items-end p-2" data-location="Bogota to Cali Colombia Highway" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4zXhq-jqM0qqXhguTFYjohJuFp4AqjMiuy-GGXPaTSdqE3ruXTfJbjQLUeE6SVQSJ3Z8giPwpQC8ZCuQA-NmqMjfd_MAnBtRE4DPKhnsTdJZ1x2DULr80ict3FFGE9N2rWG398uwIk-Ai721OKNp2Z3fd_3Mk4uVSpsZtOtqlcJRu6EX4MdgJGN2w6pVRT1R_J8SjD6IURmE-T92L6ypxwUiwgo4PJryb_ImXbsIyjXiDEf3hGENE');">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between w-full text-inverse-on-surface font-label-sm">
+<span class="bg-primary/80 px-2 py-0.5 rounded">Origen: Bogotá</span>
+<span class="material-symbols-outlined text-sm">trending_flat</span>
+<span class="bg-tertiary/80 px-2 py-0.5 rounded">Destino: Cali</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

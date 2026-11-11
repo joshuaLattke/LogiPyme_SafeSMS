@@ -1,0 +1,13 @@
+{
+  "image": "public/assets/logipyme-safesms-diapositivas.png",
+  "tool": "image_gen (herramienta integrada)",
+  "reference": "/home/joshua/Descargas/Copia de Safeclick version f.pdf, portada",
+  "prompt": "Use case: compositing / logo-brand.\nEdit the supplied cover slide to produce ONLY the joint LOGIPYME and SAFESMS logo lockup visible near its upper center. The user specifically wants the logos AS THEY APPEAR IN THIS SLIDE, not a redesigned or merged emblem. Precisely preserve their familiar shapes, colors, typography, and arrangement.\nKeep the LEFT logo: a horizontal dark royal-blue rounded rectangular plaque with a thick turquoise outline, a turquoise illustrated delivery parcel on its left, and two lines of turquoise type on its right reading EXACTLY \"Logi\" then \"Pyme\". Preserve the recognizable package drawing and the rounded rectangular border.\nKeep the RIGHT logo: a circular blue/black emblem containing a turquoise chat bubble with three dots and small curved \"SAFESMS\" lettering; to the right of that circle, bold stacked words EXACTLY \"SAFE\" in vivid royal blue and \"SMS\" in turquoise.\nPlace these two complete logos beside each other, aligned and with proportions matching the source slide. Keep them distinct within ONE wide combined logo file. No plus sign. No additional text, no new shield, no new checkmark, no fused emblem, no purple or magenta, no unrelated decoration.\nRemove every other part of the cover: green slide background, blue wave patterns, university insignia, presenter names, banner, course and teacher text. The canvas background must be truly transparent alpha. Preserve the colored plaque and circular badge because they are part of the logos themselves.\nOutput a clean high-resolution horizontal branding asset with tight framing and modest clear margins, suitable for a website header and a presentation. Faithful to the two source marks, crisp clean edges, no added lighting, 3D, photographic treatment or mockup.",
+  "verified": {
+    "width": 2103,
+    "height": 748,
+    "format": "PNG RGBA",
+    "transparent": true
+  },
+  "replacesInApp": "public/assets/logipyme-safesms-logo.png"
+}

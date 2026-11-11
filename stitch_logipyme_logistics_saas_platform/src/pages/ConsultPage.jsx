@@ -1,0 +1,14 @@
+import { useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useDemo } from '../state/DemoContext';
+import { StatusBadge } from '../components/StatusBadge';
+import { OrderTimeline } from '../components/OrderTimeline';
+import { Evidence } from '../components/Evidence';
+
+export function ConsultPage() {
+  const { orderId } = useParams(); const { state } = useDemo(); const navigate = useNavigate(); const [query, setQuery] = useState('');
+  const order = state.orders.find(o => o.id.toUpperCase() === orderId?.toUpperCase());
+  if (!orderId) return <section className="consult-entry"><span className="consult-icon">▣</span><p className="eyebrow">Para quien espera una entrega</p><h1>Tu pedido, sin dudas.</h1><p>Consulta el estado registrado y revisa cualquier mensaje que te parezca sospechoso.</p><form className="card form-stack" onSubmit={e => { e.preventDefault(); if (query.trim()) navigate(`/consulta/${encodeURIComponent(query.trim().toUpperCase())}`); }}><label>Número de pedido<input value={query} onChange={e => setQuery(e.target.value)} placeholder="Ej. LP-1048" maxLength={30} required /></label><button className="button primary">Consultar pedido</button><small>Para la presentación puedes usar LP-1048 o LP-1049.</small></form><Link className="link-button" to="/safesms/revisar">Solo quiero revisar un SMS →</Link></section>;
+  if (!order) return <div className="empty-state standalone"><h1>Pedido no encontrado</h1><p>Revisa el número. No podemos comparar un mensaje con un pedido que no está registrado.</p><Link className="button primary" to="/consulta">Consultar otro pedido</Link></div>;
+  return <section className="page-grid recipient-view"><div className="breadcrumb"><Link to="/consulta">Consultar otro pedido</Link><span>›</span>{order.id}</div><div className="page-heading heading-actions"><div><p className="eyebrow">Seguimiento del destinatario</p><h1>Pedido {order.id}</h1><p>{order.carrier} · Destino: {order.city}</p></div><StatusBadge status={order.status} /></div><div className="recipient-grid"><article className="card recipient-status"><p className="eyebrow">Último estado registrado</p><h2>{order.status}</h2><p>Guía de ejemplo: {order.tracking}</p><OrderTimeline order={order} publicView /></article><aside className="safe-callout"><span className="safe-shield">◇</span><p className="eyebrow">LogiPyme + SafeSMS</p><h2>¿Te llegó un SMS sobre esta entrega?</h2><p>Revisa sus señales antes de responder o abrir un enlace.</p><Link className="button safe-button" to={`/safesms/revisar?pedido=${order.id}`}>Revisar un SMS</Link><small>La revisión orienta; no garantiza si un mensaje es seguro o falso.</small></aside></div><Evidence order={order} /><div className="info-strip"><span>ⓘ</span><p>El seguimiento muestra datos de esta demostración. Para confirmar un cobro, comunícate con la tienda por un canal que ya conozcas.</p></div></section>;
+}

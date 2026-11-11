@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Acceso - LogiPyme</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#e2e7ff", "on-error-container": "#93000a", "on-secondary-container": "#58657b", "on-tertiary-container": "#b3fff3", "error": "#ba1a1a", "tertiary-fixed": "#89f5e7", "background": "#faf8ff", "on-tertiary-fixed": "#00201d", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-primary-fixed-variant": "#003ea8", "error-container": "#ffdad6", "on-surface-variant": "#434655", "inverse-surface": "#283044", "outline": "#737686", "outline-variant": "#c3c6d7", "on-secondary-fixed": "#0e1c2f", "primary": "#004ac6", "primary-fixed-dim": "#b4c5ff", "surface-container": "#eaedff", "secondary-fixed": "#d6e3fe", "on-secondary": "#ffffff", "on-surface": "#131b2e", "on-primary-fixed": "#00174b", "surface": "#faf8ff", "on-background": "#131b2e", "tertiary": "#006058", "tertiary-fixed-dim": "#6bd8cb", "secondary-container": "#d6e3fe", "primary-fixed": "#dbe1ff", "primary-container": "#2563eb", "inverse-on-surface": "#eef0ff", "on-primary": "#ffffff", "surface-container-low": "#f2f3ff", "inverse-primary": "#b4c5ff", "surface-tint": "#0053db", "on-primary-container": "#eeefff", "secondary-fixed-dim": "#bac7e1", "surface-variant": "#dae2fd", "secondary": "#525f75", "surface-bright": "#faf8ff", "on-secondary-fixed-variant": "#3a475c", "surface-container-highest": "#dae2fd", "surface-dim": "#d2d9f4", "tertiary-container": "#007b71", "on-tertiary-fixed-variant": "#005049", "surface-container-lowest": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.75rem", "gutter-mobile": "1rem", "container-max": "80rem", "space-2xs": "0.25rem", "space-md": "1rem", "space-3xl": "4rem", "gutter-desktop": "1.5rem", "space-xs": "0.5rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-2xl": "3rem" }, "fontFamily": { "code-tracking": [ "JetBrains Mono" ], "label-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "code-tracking": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "body-sm": [ "13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex items-center justify-center p-space-md"><main class="w-full max-w-lg bg-surface-container-lowest rounded-xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.12)] p-space-xl"><div class="flex flex-col w-full">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-xl">
+<div class="flex flex-col lg:flex-row w-full min-h-[760px]">
+<!-- Panel Izquierdo: Branding, Propuesta de Valor & Prueba Social -->
+<div class="relative w-full lg:w-[45%] bg-on-secondary-fixed text-surface p-space-lg lg:p-space-2xl flex flex-col justify-between overflow-hidden">
+<!-- Fondo geométrico de conexiones logísticas SVG -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<svg class="w-full h-full" fill="none" viewbox="0 0 400 700" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="80" id="grid-nodes" patternunits="userSpaceOnUse" width="80" x="0" y="0">
+<circle cx="10" cy="10" fill="#89f5e7" opacity="0.6" r="2.5"></circle>
+<circle cx="70" cy="50" fill="#b4c5ff" opacity="0.4" r="1.5"></circle>
+<path d="M 10 10 L 70 50 M 70 50 L 90 90 M -10 30 L 10 10" stroke="#89f5e7" stroke-dasharray="3 3" stroke-width="0.8"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid-nodes)" height="100%" width="100%"></rect>
+<path d="M 30 180 Q 140 240 280 160 T 380 320" fill="none" opacity="0.4" stroke="#6bd8cb" stroke-width="1.8"></path>
+<path d="M -20 400 Q 120 480 220 380 T 360 520" fill="none" opacity="0.5" stroke="#2563eb" stroke-width="2"></path>
+<circle cx="280" cy="160" fill="#89f5e7" opacity="0.8" r="6"></circle>
+<circle cx="220" cy="380" fill="#dbe1ff" opacity="0.8" r="5"></circle>
+</svg>
+</div>
+<!-- Gradiente ambiental de profundidad -->
+<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-tertiary-container/30 blur-3xl pointer-events-none"></div>
+<div class="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-primary-container/25 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col">
+<!-- Logotipo LogiPyme -->
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2xs">
+<span class="font-headline-md text-headline-md tracking-tight text-surface-lowest font-bold">Logi<span class="text-tertiary-fixed">Pyme</span></span>
+<span class="bg-primary/40 text-tertiary-fixed px-space-xs py-0.5 rounded-full font-label-sm text-label-sm uppercase tracking-wider">CO</span>
+</div>
+<span class="font-label-sm text-label-sm text-surface-dim">Hub Logístico Multitransportadora</span>
+</div>
+</div>
+<!-- Titular & Bajada -->
+<div class="mt-space-2xl">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high/15 px-space-sm py-1 rounded-full text-tertiary-fixed mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span class="font-label-md text-label-md">Especial para Emprendedores Colombianos</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-surface-lowest leading-tight font-bold">
+              Logística inteligente y sin enredos para hacer crecer tu microempresa en Colombia
+            </h1>
+<p class="mt-space-sm font-body-md text-body-md text-surface-dim">
+              Automatiza envíos, controla recaudos de dinero y delega la operación pesada mientras te enfocas en vender más.
+            </p>
+</div>
+<!-- Viñetas de Valor -->
+<div class="mt-space-xl flex flex-col gap-space-md">
+<div class="flex items-start gap-space-sm bg-surface-container-high/10 p-space-sm rounded-lg backdrop-blur-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/40 flex items-center justify-center shrink-0 text-tertiary-fixed mt-0.5">
+<span class="material-symbols-outlined text-headline-sm">hub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-surface-lowest">Centraliza Coordinadora, Servientrega e Inter Rapidísimo</span>
+<span class="font-body-sm text-body-sm text-surface-dim">Compara tarifas dinámicas en tiempo real y genera guías oficiales en 1 solo clic sin contratos individuales.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-high/10 p-space-sm rounded-lg backdrop-blur-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/50 flex items-center justify-center shrink-0 text-primary-fixed mt-0.5">
+<span class="material-symbols-outlined text-headline-sm">payments</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-surface-lowest">Cobro contra-entrega garantizado y liquidación semanal</span>
+<span class="font-body-sm text-body-sm text-surface-dim">Recaudo seguro de dinero en efectivo en destino con desembolso ágil directo a tu cuenta Bancolombia, Nequi o Daviplata.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-high/10 p-space-sm rounded-lg backdrop-blur-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/60 flex items-center justify-center shrink-0 text-tertiary-fixed mt-0.5">
+<span class="material-symbols-outlined text-headline-sm">chat</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-surface-lowest">Notificaciones automáticas por WhatsApp a tus clientes</span>
+<span class="font-body-sm text-body-sm text-surface-dim">Reduce devoluciones y novedades con alertas de rastreo paso a paso directas al celular de tu comprador.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonio / Social Proof MiPyme -->
+<div class="relative z-10 mt-space-2xl pt-space-lg">
+<div class="bg-surface-container-high/10 rounded-xl p-space-md backdrop-blur-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="flex text-tertiary-fixed">
+<span class="material-symbols-outlined text-label-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-label-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-label-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-label-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-label-md" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed bg-tertiary/30 px-space-2xs py-0.5 rounded">Comercio Verificado</span>
+</div>
+<p class="font-body-sm text-body-sm text-surface italic">
+              "Pasamos de embolatarnos con planillas manuales y guías de diferentes páginas a gestionar más de 450 paquetes al mes desde Medellín con cobro contra-entrega sin dolores de cabeza."
+            </p>
+<div class="flex items-center gap-space-sm mt-space-2xs">
+<div class="w-9 h-9 rounded-full overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Retrato profesional de una emprendedora colombiana de 30 años, fundadora de una marca de moda, sonriente con luz natural cálida de estudio fotográfico en Medellín, vestimenta casual ejecutiva en tonos azul marino y beige." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq8Zqa1yangaF0JXJAbH8ZaLr4lIh4qwmLkWwt1rQGpJSQ9_VvlDkGy9LuwZNaKrywHuMgDUTkeeiPeqKYzRyR3yro3F06uVfr2TWb-ZXvX_1kn8kTJvIkW9dT5FyW0kBiyqKLHm0SbTbns26pqyq5XjzTbq606cjKjrVPZJYNp07BtDj1eNI5w139MvBupit6wBAe-fnuBzHA35WWbvPGOlt4S-TKkdjEYQmx84DVdcw5vJ6uUs7S"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-surface-lowest font-semibold">Camila Restrepo</span>
+<span class="font-label-sm text-label-sm text-surface-dim">Fundadora de @AuraModaMedellin</span>
+</div>
+</div>
+</div>
+<!-- Sellos de transporte aliados -->
+<div class="flex items-center justify-between mt-space-md pt-space-xs text-surface-dim font-label-sm text-label-sm">
+<span>Alianzas activas:</span>
+<div class="flex items-center gap-space-md font-code-tracking text-code-tracking text-surface-dim opacity-80">
+<span>ENVÍA</span>
+<span>•</span>
+<span>COORDINADORA</span>
+<span>•</span>
+<span>INTER</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel Derecho: Selector de Flujo & Formulario Dinámico -->
+<div class="w-full lg:w-[55%] bg-surface-container-lowest p-space-lg lg:p-space-xl flex flex-col justify-between">
+<div>
+<!-- Selector de Modo: Registro de Empresa vs Login -->
+<div class="flex p-1 bg-surface-container-low rounded-xl mb-space-lg">
+<button class="flex-1 py-2.5 px-space-md rounded-lg font-label-lg text-label-lg transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-space-2xs" id="tab-register" onclick="switchAuthTab('register')" type="button">
+<span class="material-symbols-outlined text-headline-sm">domain_add</span>
+<span>Registrar mi Empresa</span>
+</button>
+<button class="flex-1 py-2.5 px-space-md rounded-lg font-label-lg text-label-lg transition-all duration-200 text-secondary hover:text-on-surface flex items-center justify-center gap-space-2xs" id="tab-login" onclick="switchAuthTab('login')" type="button">
+<span class="material-symbols-outlined text-headline-sm">login</span>
+<span>Ya tengo cuenta</span>
+</button>
+</div>
+<!-- VISTA: REGISTRO DE EMPRESA -->
+<div class="flex flex-col" id="view-register">
+<div class="mb-space-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Crea tu cuenta empresarial</h2>
+<p class="font-body-md text-body-md text-secondary mt-1">Activa tu panel de despachos multicarrier en menos de 2 minutos sin costo de afiliación.</p>
+</div>
+<form class="flex flex-col gap-space-md" id="form-register" onsubmit="event.preventDefault(); handleRegistration();">
+<!-- Bloque 1: Titular y Contacto Principal -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="reg-fullname">Nombre completo del titular <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-headline-sm pointer-events-none">person</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="reg-fullname" placeholder="Ej. Valentina Morales Gómez" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="reg-email">Correo electrónico comercial <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-headline-sm pointer-events-none">mail</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="reg-email" placeholder="gerencia@tumarca.co" required="" type="email"/>
+</div>
+</div>
+</div>
+<!-- Bloque 2: WhatsApp Comercial & Documento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="reg-whatsapp">WhatsApp del negocio (+57 Colombia) <span class="text-error">*</span></label>
+<div class="flex items-center rounded-lg bg-surface-container-low focus-within:bg-surface-container-lowest focus-within:ring-2 focus-within:ring-primary-container transition-all">
+<div class="flex items-center gap-1 pl-3 pr-2 text-secondary font-label-md text-label-md shrink-0">
+<span class="font-bold text-on-surface">🇨🇴 +57</span>
+</div>
+<input class="w-full h-11 pr-3 bg-transparent text-on-surface font-body-md text-body-md focus:outline-none" id="reg-whatsapp" maxlength="12" placeholder="310 123 4567" required="" type="tel"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Para soporte operativo y confirmaciones de recaudo.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="reg-nit">NIT o Cédula de Ciudadanía <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-headline-sm pointer-events-none">badge</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="reg-nit" placeholder="Ej. 901234567-1 o CC" required="" type="text"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Persona natural o jurídica para facturación Dian.</span>
+</div>
+</div>
+<!-- Bloque 3: Datos de Marca y Ubicación de Despacho -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="reg-brand">Nombre comercial de tu Marca <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-headline-sm pointer-events-none">storefront</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="reg-brand" placeholder="Ej. Dulces &amp; Moda Artesanal" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="reg-city">Ciudad y Departamento base <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-headline-sm pointer-events-none">location_city</span>
+<select class="w-full h-11 pl-10 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all appearance-none cursor-pointer" id="reg-city" required="">
+<option disabled="" selected="" value="">Selecciona tu ciudad de recogida</option>
+<option value="bogota">Bogotá D.C. (Cundinamarca)</option>
+<option value="medellin">Medellín (Antioquia)</option>
+<option value="cali">Cali (Valle del Cauca)</option>
+<option value="barranquilla">Barranquilla (Atlántico)</option>
+<option value="bucaramanga">Bucaramanga (Santander)</option>
+<option value="pereira">Pereira (Risaralda)</option>
+<option value="cartagena">Cartagena (Bolívar)</option>
+<option value="cucuta">Cúcuta (Norte de Santander)</option>
+<option value="manizales">Manizales (Caldas)</option>
+<option value="ibague">Ibagué (Tolima)</option>
+<option value="otra">Otra ciudad o municipio</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 text-secondary pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Bloque 4: Canal de Ventas y Contraseña -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="reg-channel">Canal principal de ventas <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-headline-sm pointer-events-none">sell</span>
+<select class="w-full h-11 pl-10 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all appearance-none cursor-pointer" id="reg-channel" required="">
+<option disabled="" selected="" value="">¿Dónde comercializas?</option>
+<option value="instagram">Instagram &amp; Facebook Direct</option>
+<option value="whatsapp">WhatsApp Business / Catálogo</option>
+<option value="tiktok">TikTok Shop / Live Commerce</option>
+<option value="ecommerce">Tienda Online (Shopify, WooCommerce, etc.)</option>
+<option value="fisico">Local comercial físico / Punto de venta</option>
+<option value="mixto">Omnicanal (Redes + Local)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 text-secondary pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="reg-password">Contraseña segura <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-headline-sm pointer-events-none">lock</span>
+<input class="w-full h-11 pl-10 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="reg-password" placeholder="Mínimo 8 caracteres" required="" type="password"/>
+<button class="absolute right-3 text-secondary hover:text-on-surface" onclick="togglePasswordVisibility('reg-password', this)" type="button">
+<span class="material-symbols-outlined text-headline-sm">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Casilla Legal Habeas Data Colombia -->
+<div class="pt-space-xs">
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-secondary leading-relaxed">
+                    Acepto los <a class="text-primary hover:underline font-semibold" href="#">Términos y Condiciones</a> y autorizo expresamente la <a class="text-primary hover:underline font-semibold" href="#">Política de Tratamiento de Datos Personales</a> conforme a la <strong>Ley 1581 de 2012</strong> de Habeas Data Colombia.
+                  </span>
+</label>
+</div>
+<!-- CTA Registro -->
+<div class="pt-space-xs">
+<button class="w-full h-12 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span>Crear Cuenta Gratis y Empezar a Despachar</span>
+</button>
+<div class="flex items-center justify-center gap-space-md mt-space-xs text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-headline-sm text-tertiary">check_circle</span> Sin cobros fijos mensuales</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-headline-sm text-tertiary">check_circle</span> Tarifa por envío efectivo</span>
+</div>
+</div>
+</form>
+</div>
+<!-- VISTA: INICIO DE SESIÓN -->
+<div class="hidden flex-col" id="view-login">
+<div class="mb-space-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Bienvenido de vuelta</h2>
+<p class="font-body-md text-body-md text-secondary mt-1">Ingresa a tu central de envíos y consulta el estado de tus recaudos contra-entrega.</p>
+</div>
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault(); handleLogin();">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="login-email">Correo electrónico o NIT</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-headline-sm pointer-events-none">mail</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="login-email" placeholder="tumarca@correo.com o NIT registrado" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="login-password">Contraseña</label>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">¿Olvidaste tu contraseña?</a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-headline-sm pointer-events-none">lock</span>
+<input class="w-full h-11 pl-10 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="login-password" placeholder="Introduce tu clave de acceso" required="" type="password"/>
+<button class="absolute right-3 text-secondary hover:text-on-surface" onclick="togglePasswordVisibility('login-password', this)" type="button">
+<span class="material-symbols-outlined text-headline-sm">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between py-space-2xs">
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-secondary">Recordar este dispositivo</span>
+</label>
+</div>
+<button class="w-full h-12 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined">login</span>
+<span>Ingresar a mi Panel</span>
+</button>
+<!-- Acceso rápido con WhatsApp OTP para MiPymes -->
+<div class="relative my-space-sm flex items-center justify-center">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute bg-surface-container-lowest px-space-sm font-label-sm text-label-sm text-secondary">O acceso rápido sin contraseña</span>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-space-xs transition-all" type="button">
+<span class="material-symbols-outlined text-headline-sm text-tertiary">chat</span>
+<span>Ingresar con código PIN a mi WhatsApp</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Soporte y Asistencia por WhatsApp -->
+<div class="mt-space-xl pt-space-md border-t border-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-headline-sm">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">¿Tienes dudas con tus rutas o tarifas?</span>
+<span class="font-body-sm text-body-sm text-secondary">Asesores logísticos disponibles de 7am a 8pm</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-space-2xs bg-tertiary hover:bg-tertiary-container text-on-tertiary px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-all shadow-sm shrink-0" href="https://wa.me/573000000000?text=Hola%20LogiPyme,%20quiero%20información%20para%20despachar%20los%20paquetes%20de%20mi%20marca" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-headline-sm">chat</span>
+<span>Hablar por WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchAuthTab(mode) {
+    const registerView = document.getElementById('view-register');
+    const loginView = document.getElementById('view-login');
+    const tabRegister = document.getElementById('tab-register');
+    const tabLogin = document.getElementById('tab-login');
+
+    if (mode === 'register') {
+      registerView.classList.remove('hidden');
+      loginView.classList.add('hidden');
+
+      tabRegister.className = 'flex-1 py-2.5 px-space-md rounded-lg font-label-lg text-label-lg transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-space-2xs';
+      tabLogin.className = 'flex-1 py-2.5 px-space-md rounded-lg font-label-lg text-label-lg transition-all duration-200 text-secondary hover:text-on-surface flex items-center justify-center gap-space-2xs';
+    } else {
+      registerView.classList.add('hidden');
+      loginView.classList.remove('hidden');
+
+      tabLogin.className = 'flex-1 py-2.5 px-space-md rounded-lg font-label-lg text-label-lg transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-space-2xs';
+      tabRegister.className = 'flex-1 py-2.5 px-space-md rounded-lg font-label-lg text-label-lg transition-all duration-200 text-secondary hover:text-on-surface flex items-center justify-center gap-space-2xs';
+    }
+  }
+
+  function togglePasswordVisibility(inputId, btn) {
+    const input = document.getElementById(inputId);
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function handleRegistration() {
+    const brand = document.getElementById('reg-brand').value || 'tu marca';
+    alert('¡Felicitaciones! Cuenta creada con éxito para ' + brand + '. Te redirigiremos al panel de alistamiento de envíos.');
+  }
+
+  function handleLogin() {
+    alert('Iniciando sesión segura en LogiPyme Colombia...');
+  }
+</script></main></body></html>

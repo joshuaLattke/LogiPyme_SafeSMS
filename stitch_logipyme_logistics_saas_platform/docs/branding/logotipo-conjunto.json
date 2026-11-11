@@ -1,0 +1,16 @@
+{
+  "image": "public/assets/logipyme-safesms-logo.png",
+  "tool": "image_gen (herramienta integrada)",
+  "references": [
+    "public/assets/logipyme-logo.png",
+    "public/assets/safesms-logo.png"
+  ],
+  "prompt": "Use case: logo-brand.\nCreate ONE new combined brand logo for the integrated Colombian logistics and SMS prevention project. Reference image 1 is the existing LogiPyme brand (package/check symbol and blue/navy/teal wordmark). Reference image 2 is the SafeSMS brand (chat bubble in purple circle). They are reference inputs, not objects to paste side by side.\nPrimary request: a polished, unified logo with a SINGLE simple emblem combining an isometric delivery box with a speech bubble and a subtle protective check, beside the two names in a balanced two-line wordmark.\nText EXACTLY: first line \"LogiPyme\", second line \"+ SafeSMS\". Preserve uppercase L and P in LogiPyme and uppercase S, S, M, S in SafeSMS. No other text, no tagline.\nStyle: clean flat vector-like logo, crisp geometric edges, professional and approachable SaaS identity, premium typography, robust at small UI sizes. Use navy #0B192C and royal blue #2563EB for logistics, a restrained purple #7C3AED chat accent, and a small teal #0D9488 check. Text primarily navy with blue/purple accents. The emblem must feel like one coherent mark, not a collage.\nComposition: landscape rectangular logo asset, tight usable framing around the complete horizontal lockup; emblem left, aligned two-line names right. Minimal empty margins, no large square poster padding. Genuine transparent alpha background.\nAvoid: photographs, 3D, mockups, shadows, glow, decorative rings, fine dotted lines, additional logos, extra words, duplicated marks, white or black background rectangles, checkerboard drawn into the image, watermarks.",
+  "verified": {
+    "text": "LogiPyme + SafeSMS",
+    "width": 1942,
+    "height": 809,
+    "format": "PNG RGBA",
+    "transparent": true
+  }
+}
